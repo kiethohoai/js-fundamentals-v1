@@ -1,9 +1,7 @@
-let firstName = "John";
-let lastName = "Ho";
+let t1;
+let t2 = null;
 
-console.log(firstName + " " + lastName);
-console.log(`${firstName} ${lastName}`);
-console.log(`Hello, my name is ${firstName} ${lastName}.`);
-
-let job1 = "Programmer";
-let job2 = "Teacher";
+t1 = "t1";
+t2 = undefined;
+console.log("🚀  t1 =>", t1);
+console.log("🚀  t2 =>", t2);

@@ -2,3 +2,4 @@
 #5 Values and Variables
 #6 Practice Assignments
 #7 Data Types
+#8 let, const and var

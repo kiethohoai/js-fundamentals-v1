@@ -5,6 +5,7 @@
 004 Installing Node.js and Setting Up a Dev Environment
 005 Learning How to Code
 006 How to Think Like a Developer Become a Problem Solver!
+007 Using Google, StackOverflow and MDN
 
 #4 Linking a JavaScript File
 #5 Values and Variables

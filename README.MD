@@ -30,3 +30,4 @@
 008 CHALLENGE #1
 009 Introduction to Arrays
 010 Basic Array Operations (Methods)
+011 CHALLENGE #2

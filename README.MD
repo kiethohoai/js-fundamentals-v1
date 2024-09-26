@@ -22,3 +22,4 @@
 03 JAVASCRIPT FUNDAMENTALS PART 2 - 
 001 Section Intro
 002 Activating Strict Mode
+003 Functions

@@ -25,3 +25,4 @@
 003 Functions
 004 Function Declarations vs. Expressions
 005 Arrow Functions
+006 Functions Calling Other Functions

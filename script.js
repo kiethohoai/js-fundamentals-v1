@@ -1,13 +1,17 @@
 'use strict';
 
-// function logger() {
-//   console.log(`My name is John`);
-// }
+const r1 = calAge1(1997);
+console.log('🚀  r1 =>', r1);
 
-// logger();
+// Function Declaration
+function calAge1(birthYear) {
+  return 2037 - birthYear;
+}
 
-// function test(a, b) {
-//   console.log('🚀  a, b =>', a, b);
-//   return `Juice with ${a} apples and ${b} oranges!`;
-// }
-// console.log('🚀  test(5, 0) =>', test(5, 0));
+// Expressing Function
+const calAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const r2 = calAge2(1994);
+console.log('🚀  r2 =>', r2);

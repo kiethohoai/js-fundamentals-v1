@@ -1,2 +1,4 @@
-const a = 10 > 5 ? true : false;
-console.log('🚀  a =>', a);
+'use strict';
+
+// const interface = 'Audio';
+const private = 123;

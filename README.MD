@@ -31,3 +31,4 @@
 009 Introduction to Arrays
 010 Basic Array Operations (Methods)
 011 CHALLENGE #2
+012 Objects

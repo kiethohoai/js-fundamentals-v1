@@ -1,14 +1,20 @@
-'use strict';
+// const f1 = 'Michael';
+// const f2 = 'Jackson';
+// const f3 = 'Bob';
 
-const calcAge = function (birthYear) {
-  const age = 2037 - birthYear;
-  return age;
-};
+// const arr = [f1, f2, f3];
+// // console.log('🚀  arr =>', arr);
 
-const year = function (birthYear, firstName) {
-  const age = calcAge(birthYear);
-  const retirement = 65 - age;
-  return `${firstName} retires in ${retirement} years`;
-};
+// const years = new Array(1990, 1991, 1992);
+// // console.log('🚀  years =>', years);
+// // console.log('🚀  years[0] =>', years[0]);
+// // console.log('🚀  years[1] =>', years[1]);
+// // console.log('🚀  years[2] =>', years[2]);
+// // console.log('🚀  years.length =>', years.length);
+// // console.log('🚀  years =>', years[years.length - 1]);
+// // years[2] = 9999;
+// // console.log('🚀  years =>', years);
 
-console.log(year(1991, 'Jonas'));
+// const arr2 = [years, arr, 1, 2, 3];
+// console.log('🚀  arr2 =>', arr2);
+// console.log('🚀  arr2.length =>', arr2.length);

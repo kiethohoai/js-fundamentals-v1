@@ -28,3 +28,4 @@
 006 Functions Calling Other Functions
 007 Reviewing Functions
 008 CHALLENGE #1
+009 Introduction to Arrays

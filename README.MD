@@ -19,3 +19,4 @@
 024 The Conditional (Ternary) Operator
 025 CHALLENGE #4 Video Solution
 026 JavaScript Releases ES5, ES6+ and ESNext
+03 JAVASCRIPT FUNDAMENTALS PART 2 - 001 Section Intro

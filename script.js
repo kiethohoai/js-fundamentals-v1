@@ -1,6 +1,9 @@
-const a = true;
-const b = true;
+const a = false;
+const b = false;
 
-if (a || b) {
-  console.log('a or b is true');
-}
+console.log('🚀  a =>', a);
+console.log('🚀  b =>', b);
+
+console.log('🚀  a && b =>', a && b);
+console.log('🚀  a || b =>', a || b);
+console.log('🚀  !a && !b =>', !a && !b);

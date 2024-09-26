@@ -12,3 +12,4 @@
 017 Truthy and Falsy Values
 018 Equality Operators == vs. ===
 019 Boolean Logic
+020 Logical Operators

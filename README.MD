@@ -33,3 +33,4 @@
 011 CHALLENGE #2
 012 Objects
 013 Dot vs. Bracket Notation
+014 Object Methods

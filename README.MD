@@ -1,3 +1,6 @@
+05 - Developer Skills & Editor Setup
+001 Section Intro
+
 #4 Linking a JavaScript File
 #5 Values and Variables
 #6 Practice Assignments
@@ -6,7 +9,7 @@
 #9 Basic Operators
 #10 Operator Precedence
 #13 Strings and Template Literals
-014 Taking Decisions if  else Statements
+014 Taking Decisions if else Statements
 015 CHALLENGE #2
 016 Type Conversion and Coercion
 017 Truthy and Falsy Values
@@ -19,7 +22,7 @@
 024 The Conditional (Ternary) Operator
 025 CHALLENGE #4 Video Solution
 026 JavaScript Releases ES5, ES6+ and ESNext
-03 JAVASCRIPT FUNDAMENTALS PART 2 - 
+03 JAVASCRIPT FUNDAMENTALS PART 2 -
 001 Section Intro
 002 Activating Strict Mode
 003 Functions

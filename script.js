@@ -1,20 +1,34 @@
-// const f1 = 'Michael';
-// const f2 = 'Jackson';
-// const f3 = 'Bob';
+const friends = ['John', 'Ahmed', 'Sayed', 'Eman'];
+console.log('🚀  friends =>', friends);
 
-// const arr = [f1, f2, f3];
-// // console.log('🚀  arr =>', arr);
+// // push => add a new element in the end
+// const newLength = friends.push('Osama');
+// console.log('🚀  friends =>', friends);
 
-// const years = new Array(1990, 1991, 1992);
-// // console.log('🚀  years =>', years);
-// // console.log('🚀  years[0] =>', years[0]);
-// // console.log('🚀  years[1] =>', years[1]);
-// // console.log('🚀  years[2] =>', years[2]);
-// // console.log('🚀  years.length =>', years.length);
-// // console.log('🚀  years =>', years[years.length - 1]);
-// // years[2] = 9999;
-// // console.log('🚀  years =>', years);
+// // unshift =>  add a new element in the beginning
+// const newLength2 = friends.unshift('John');
+// console.log('🚀  friends =>', friends);
 
-// const arr2 = [years, arr, 1, 2, 3];
-// console.log('🚀  arr2 =>', arr2);
-// console.log('🚀  arr2.length =>', arr2.length);
+// // pop =>  remove the last element of array
+// const popped = friends.pop();
+// console.log('🚀  friends =>', friends);
+// console.log('🚀  popped =>', popped);
+
+// // shift() remove the first element
+// friends.shift();
+// console.log('🚀  friends =>', friends);
+
+// // indexOf
+// const index = friends.indexOf('Ahmed');
+// console.log('🚀  index =>', index);
+
+// ncludes() return true/false
+
+// const isIncludes = friends.includes('John');
+// console.log('🚀  isIncludes =>', isIncludes);
+
+// if (friends.includes('John')) {
+//   console.log('John is included');
+// } else {
+//   console.log('John is not included');
+// }

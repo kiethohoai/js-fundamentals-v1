@@ -29,3 +29,4 @@
 007 Reviewing Functions
 008 CHALLENGE #1
 009 Introduction to Arrays
+010 Basic Array Operations (Methods)

@@ -11,3 +11,4 @@
 016 Type Conversion and Coercion
 017 Truthy and Falsy Values
 018 Equality Operators == vs. ===
+019 Boolean Logic

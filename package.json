@@ -1,0 +1,14 @@
+{
+  "name": "js-fundamentals-v1",
+  "version": "1.0.0",
+  "description": "05 - Developer Skills & Editor Setup\r 001 Section Intro\r 002 Section Roadmap\r 003 Setting up Prettier and VS Code",
+  "main": "script.js",
+  "scripts": {
+    "sv": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}

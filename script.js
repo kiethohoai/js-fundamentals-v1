@@ -1,12 +1,17 @@
 // 018 Looping Backwards and Loops in Loops
-const person = [
-  'John',
-  'Ho',
-  2037 - 1994,
-  'IT',
-  ['Kavith', 'Jason', 'Salima', 'Fang', 'Joe'],
-];
+// const numbers = [1, 2, 3, 4, 5];
 
-for (let i = person.length - 1; i >= 0; i--) {
-  console.log(i, person[i]);
+// let i = 1;
+// while (i <= 10) {
+//   console.log('i =', i);
+//   i++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log('You rolled a', dice);
+  dice = Math.trunc(Math.random() * 6) + 1;
+
+  if (dice === 6) console.log('Loop is about to end...');
 }

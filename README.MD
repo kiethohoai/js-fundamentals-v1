@@ -7,6 +7,7 @@
 006 How to Think Like a Developer Become a Problem Solver!
 007 Using Google, StackOverflow and MDN
 008 Debugging (Fixing Errors)
+009 Debugging with the Console and Breakpoints
 
 #4 Linking a JavaScript File
 #5 Values and Variables

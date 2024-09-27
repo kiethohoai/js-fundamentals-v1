@@ -6,6 +6,7 @@
 005 Selecting and Manipulating Elements
 006 Handling Click Events
 007 Implementing the Game Logic
+008 Manipulating CSS Styles
 
 05 - Developer Skills & Editor Setup
 001 Section Intro

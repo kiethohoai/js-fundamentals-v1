@@ -15,6 +15,10 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = '🚀CORRECT NUMBER🚀';
     score++;
     document.querySelector('.score').textContent = score;
+
+    // Change background color
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
   } else if (guess > secretNumber) {
     if (score === 0) {
       document.querySelector('.message').textContent = '🚀YOU LOSE🚀';

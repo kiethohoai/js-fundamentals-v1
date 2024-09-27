@@ -4,6 +4,7 @@
 003 PROJECT #1 Guess My Number!
 004 What_s the DOM and DOM Manipulation
 005 Selecting and Manipulating Elements
+006 Handling Click Events
 
 05 - Developer Skills & Editor Setup
 001 Section Intro

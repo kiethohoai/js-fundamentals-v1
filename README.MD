@@ -5,6 +5,7 @@
 004 What_s the DOM and DOM Manipulation
 005 Selecting and Manipulating Elements
 006 Handling Click Events
+007 Implementing the Game Logic
 
 05 - Developer Skills & Editor Setup
 001 Section Intro

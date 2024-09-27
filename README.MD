@@ -1,3 +1,5 @@
+#07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
+
 05 - Developer Skills & Editor Setup
 001 Section Intro
 002 Section Roadmap

@@ -1,13 +1,4 @@
-const mskv = function () {
-  const ms = {
-    type: 'temp',
-    unit: 'c',
-    value: +prompt('What is the temperature in Celsius?'),
-  };
-  console.warn('🚀  ms.value =>', ms.value);
+'use strict';
 
-  debugger;
-  const kv = ms.value + 273;
-  return kv;
-};
-console.warn('🚀  mskv() =>', mskv());
+const p = document.querySelector('.message');
+console.log('🚀  p =>', p);

@@ -13,6 +13,7 @@
 012 PROJECT #2 Modal Window
 013 Working With Classes
 014 Handling an Esc Keypress Event
+015 PROJECT #3 Pig Game
 
 
 05 - Developer Skills & Editor Setup

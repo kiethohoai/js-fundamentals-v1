@@ -10,6 +10,7 @@
 009 Coding Challenge #1
 010 Implementing Highscores
 011 Refactoring Our Code The DRY Principle
+012 PROJECT #2 Modal Window
 
 
 05 - Developer Skills & Editor Setup

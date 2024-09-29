@@ -14,6 +14,7 @@
 013 Working With Classes
 014 Handling an Esc Keypress Event
 015 PROJECT #3 Pig Game
+016 Rolling the Dice
 
 
 05 - Developer Skills & Editor Setup

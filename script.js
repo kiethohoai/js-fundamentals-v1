@@ -25,25 +25,38 @@ document.querySelector('.check').addEventListener('click', function () {
     if (score > highScore) {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
-    }
-  } else if (guess > secretNumber) {
-    if (score === 0) {
-      document.querySelector('.message').textContent = '🚀YOU LOSE🚀';
-    } else {
-      document.querySelector('.message').textContent = '🚀TOO HIGH🚀';
+    } //todo Task Here
+  } else if (guess !== secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent =
+        guess > secretNumber ? '🚀TOO HIGH🚀' : '🚀TOO LOW🚀';
       score--;
       document.querySelector('.score').textContent = score;
-    }
-  } else if (guess < secretNumber) {
-    if (score === 0) {
-      document.querySelector('.message').textContent = '🚀YOU LOSE🚀';
     } else {
-      document.querySelector('.message').textContent = '🚀TOO LOW🚀';
-      score--;
-      document.querySelector('.score').textContent = score;
+      document.querySelector('.message').textContent = '🚀YOU LOSE🚀';
+      document.querySelector('.score').textContent = 0;
     }
   }
+  // todo End block
 });
+
+// if (guess > secretNumber) {
+//   if (score === 0) {
+//     document.querySelector('.message').textContent = '🚀YOU LOSE🚀';
+//   } else {
+//     document.querySelector('.message').textContent = '🚀TOO HIGH🚀';
+//     score--;
+//     document.querySelector('.score').textContent = score;
+//   }
+// } else if (guess < secretNumber) {
+//   if (score === 0) {
+//     document.querySelector('.message').textContent = '🚀YOU LOSE🚀';
+//   } else {
+//     document.querySelector('.message').textContent = '🚀TOO LOW🚀';
+//     score--;
+//     document.querySelector('.score').textContent = score;
+//   }
+// }
 
 const againButton = document.querySelector('.again');
 againButton.addEventListener('click', function () {

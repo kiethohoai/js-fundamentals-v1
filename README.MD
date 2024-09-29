@@ -7,7 +7,10 @@
 006 Handling Click Events
 007 Implementing the Game Logic
 008 Manipulating CSS Styles
-009 Coding Challenge #1 111
+009 Coding Challenge #1
+010 Implementing Highscores
+011 Refactoring Our Code The DRY Principle
+
 
 05 - Developer Skills & Editor Setup
 001 Section Intro

@@ -1,6 +1,7 @@
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro
 002 Section Roadmap
+003 An High-Level Overview of JavaScript
 
 #07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
 001 Section Intro

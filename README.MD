@@ -3,6 +3,7 @@
 002 Section Roadmap
 003 An High-Level Overview of JavaScript
 004 The JavaScript Engine and Runtime
+005 Execution Contexts and The Call Stack
 
 #07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
 001 Section Intro

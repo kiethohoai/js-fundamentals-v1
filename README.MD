@@ -1,3 +1,5 @@
+#08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
+
 #07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
 001 Section Intro
 002 Section Roadmap
@@ -18,7 +20,6 @@
 017 Switching the Active Player
 018 Holding Current Score
 019 Resetting the Game
-
 
 05 - Developer Skills & Editor Setup
 001 Section Intro

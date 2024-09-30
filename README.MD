@@ -6,6 +6,7 @@
 005 Execution Contexts and The Call Stack
 006 Scope and The Scope Chain
 007 Scoping in Practice
+008 Variable Environment Hoisting and The TDZ
 
 #07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
 001 Section Intro

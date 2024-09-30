@@ -17,6 +17,7 @@
 016 Rolling the Dice
 017 Switching the Active Player
 018 Holding Current Score
+019 Resetting the Game
 
 
 05 - Developer Skills & Editor Setup

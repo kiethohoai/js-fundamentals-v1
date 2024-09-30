@@ -15,15 +15,40 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-// todo Starting Conditions
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add('hidden');
-
 let currentScore = 0;
-const scores = [90, 90];
+let scores = [90, 90];
 let activePlayer = 0;
 let playing = true;
+
+const init = () => {
+  // Remove winner class
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  player1El.classList.remove('player--active');
+
+  // Reset all initial state
+
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  diceEl.classList.add('hidden');
+
+  currentScore = 0;
+  scores = [90, 90];
+  activePlayer = 0;
+  playing = true;
+  document.querySelector(`.player--${activePlayer}`).classList.add('player--active');
+
+  // Reset main score
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+
+  // Reset current score
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+};
+
+// todo Starting Conditions
+init();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -73,4 +98,8 @@ btnHold.addEventListener('click', function () {
       switchPlayer();
     }
   }
+});
+
+btnNew.addEventListener('click', function () {
+  init();
 });

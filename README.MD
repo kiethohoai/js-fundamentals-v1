@@ -9,6 +9,7 @@
 008 Variable Environment Hoisting and The TDZ
 009 Hoisting and TDZ in Practice
 010 The this Keyword
+011 The this Keyword in Practice
 
 #07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
 001 Section Intro

@@ -1,31 +1,29 @@
-// console.log(`🚀  name =>`, name);
-// console.log(`🚀  age =>`, age);
-// console.log(`🚀  year =>`, year);
+'use strict';
 
-// var name = 'john';
-// let age = 30;
-// const year = 2024;
+// console.log(this);
 
-// sum1(5, 5);
-// sum2(5, 5);
-// sum3(5, 5);
+// const calcAge = function (birthYear) {
+//   console.log(2037 - birthYear);
+//   console.log(this);
+// };
+// calcAge(1994);
 
-// function sum1(a, b) {
-//   console.log(`🚀  a + b =>`, a + b);
-// }
+// const calcAge = birthYear => {
+//   console.log(2037 - birthYear);
+//   console.log(this);
+// };
+// calcAge(1994);
 
-// const sum2 = function (a, b) {
-//   console.log(`🚀  a + b =>`, a + b);
+// const john = {
+//   year: 1994,
+//   calcAge: function () {
+//     console.log(this);
+//     // console.log(2024 - this.year);
+//   },
 // };
 
-// const sum3 = (a, b) => {
-//   console.log(`🚀  a + b =>`, a + b);
-// };
+// john.calcAge();
 
-// if (!numProducts) deleteShoppingCart();
-
-// var numProducts = 10;
-
-// function deleteShoppingCart() {
-//   console.log('🚀deleteShoppingCart');
-// }
+const john = {
+  year: 1994,
+};

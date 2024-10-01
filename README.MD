@@ -10,6 +10,7 @@
 009 Hoisting and TDZ in Practice
 010 The this Keyword
 011 The this Keyword in Practice
+012 Regular Functions vs. Arrow Functions
 
 #07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
 001 Section Intro

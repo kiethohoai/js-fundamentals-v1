@@ -4,6 +4,7 @@
 003 Destructuring Arrays
 004 Destructuring Objects
 005 The Spread Operator (...)
+006 Rest Pattern and Parameters
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

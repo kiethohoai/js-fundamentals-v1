@@ -23,8 +23,10 @@ const restaurant = {
   },
 };
 
-const {
-  fri: { open, close },
-} = restaurant.openingHours;
+const num = [1, 2, 3];
 
-console.log(open, close);
+function test(a, b, c) {
+  console.log(`🚀  a,b,c =>`, a, b, c);
+}
+
+test(...num);

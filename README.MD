@@ -2,6 +2,7 @@
 001 Section Intro
 002 Section Roadmap
 003 Destructuring Arrays
+004 Destructuring Objects
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

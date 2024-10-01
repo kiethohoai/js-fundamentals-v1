@@ -1,21 +1,19 @@
 'use strict';
 
-// todo E1 Primitive Types
-// let lName = 'John';
-// let lName2 = lName;
-// lName = 'David';
-
-// console.log(`🚀  lName =>`, lName);
-// console.log(`🚀  lName2 =>`, lName2);
-
-// todo E2 Reference Types
-const john = {
-  name: 'John',
-  age: 30,
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 };
 
-const david = Object.assign({}, john);
-david.name = 'David';
+// Destructuring
+const arr = [1, 2, 3];
+const [a, b, c] = arr;
+// console.log(a, b, c);
 
-console.log(`🚀  john =>`, john);
-console.log(`🚀  david =>`, david);
+const [first, , second] = restaurant.categories;
+console.log(first, second);
+
+

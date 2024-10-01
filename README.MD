@@ -12,6 +12,7 @@
 011 The this Keyword in Practice
 012 Regular Functions vs. Arrow Functions
 013 Primitives vs. Objects (Primitive vs. Reference Types)
+014 Primitives vs. Objects in Practice
 
 #07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
 001 Section Intro

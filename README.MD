@@ -7,6 +7,7 @@
 006 Scope and The Scope Chain
 007 Scoping in Practice
 008 Variable Environment Hoisting and The TDZ
+009 Hoisting and TDZ in Practice
 
 #07 JAVASCRIPT IN THE BROWSER DOM AND EVENTS FUNDAMENTALS
 001 Section Intro

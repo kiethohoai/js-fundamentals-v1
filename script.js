@@ -1,28 +1,31 @@
-'use strict';
+// console.log(`🚀  name =>`, name);
+// console.log(`🚀  age =>`, age);
+// console.log(`🚀  year =>`, year);
 
-function calcAge(birthYear) {
-  const age = 2024 - birthYear;
+// var name = 'john';
+// let age = 30;
+// const year = 2024;
 
-  function printAge() {
-    const output = `${fName} & you are ${age}, born in ${birthYear}`;
-    console.log(output);
+// sum1(5, 5);
+// sum2(5, 5);
+// sum3(5, 5);
 
-    if (birthYear >= 1981 && birthYear <= 1996) {
-      var millenial = true;
-      const str = `Oh, and you're a millenial, ${fName}`;
-      console.log(`🚀  str =>`, str);
-    }
-    console.log(`🚀  millenial =>`, millenial);
+// function sum1(a, b) {
+//   console.log(`🚀  a + b =>`, a + b);
+// }
 
-    function add(a, b) {
-      return a + b;
-    }
-    console.log(`🚀  add(a, b) =>`, add(5, 5));
-  }
+// const sum2 = function (a, b) {
+//   console.log(`🚀  a + b =>`, a + b);
+// };
 
-  printAge();
-  return age;
-}
+// const sum3 = (a, b) => {
+//   console.log(`🚀  a + b =>`, a + b);
+// };
 
-const fName = 'John';
-calcAge(1994);
+// if (!numProducts) deleteShoppingCart();
+
+// var numProducts = 10;
+
+// function deleteShoppingCart() {
+//   console.log('🚀deleteShoppingCart');
+// }

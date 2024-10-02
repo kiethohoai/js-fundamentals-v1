@@ -6,6 +6,7 @@
 005 The Spread Operator (...)
 006 Rest Pattern and Parameters
 007 Short Circuiting (&& and )
+008 The Nullish Coalescing Operator ()
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

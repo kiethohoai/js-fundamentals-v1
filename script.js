@@ -1,10 +1,6 @@
 'use strict';
 
-// SPREAD OPERATOR because the right side of =
-const arr = [1, 2, ...[3, 4, 5]];
-console.log(`🚀  arr =>`, arr);
-
-// REST PARAMS because the left side of =
-const [a, b, ...c] = [1, 2, 3, 4, 5];
-console.log(`🚀  a, b =>`, a, b);
-console.log(`🚀  c =>`, c);
+// AND
+console.log(0 && 'John');
+console.log(7 && 'John');
+console.log('Hello' && 23 && null && 'JohnHo');

@@ -9,6 +9,7 @@
 008 The Nullish Coalescing Operator ()
 009 Logical Assignment Operators
 010 Coding Challenge #1
+011 Looping Arrays The for-of Loop
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

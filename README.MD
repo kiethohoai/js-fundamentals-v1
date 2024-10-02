@@ -18,6 +18,7 @@
 018 Maps Iteration
 019 Summary Which Data Structure to Use
 021 Working With Strings - Part 1
+022 Working With Strings - Part 2
 
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES

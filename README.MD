@@ -8,6 +8,7 @@
 007 Short Circuiting (&& and )
 008 The Nullish Coalescing Operator ()
 009 Logical Assignment Operators
+010 Coding Challenge #1
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

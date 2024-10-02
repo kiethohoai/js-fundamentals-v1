@@ -14,6 +14,7 @@
 013 Optional Chaining (.)
 014 Looping Objects Object Keys, Values, and Entries
 016 Sets
+017 Maps Fundamentals
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

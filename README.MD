@@ -10,6 +10,7 @@
 009 Logical Assignment Operators
 010 Coding Challenge #1
 011 Looping Arrays The for-of Loop
+012 Enhanced Object Literals
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

@@ -21,6 +21,7 @@
 022 Working With Strings - Part 2
 023 Working With Strings - Part 3
 024 Coding Challenge #4
+025 String Methods Practice
 
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES

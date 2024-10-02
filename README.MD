@@ -20,6 +20,7 @@
 021 Working With Strings - Part 1
 022 Working With Strings - Part 2
 023 Working With Strings - Part 3
+024 Coding Challenge #4
 
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES

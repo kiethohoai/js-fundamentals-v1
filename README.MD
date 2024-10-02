@@ -15,6 +15,7 @@
 014 Looping Objects Object Keys, Values, and Entries
 016 Sets
 017 Maps Fundamentals
+018 Maps Iteration
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

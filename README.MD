@@ -19,6 +19,7 @@
 019 Summary Which Data Structure to Use
 021 Working With Strings - Part 1
 022 Working With Strings - Part 2
+023 Working With Strings - Part 3
 
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES

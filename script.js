@@ -17,6 +17,15 @@
 // const name = 'ho hoai kiet ho hoai san ho hoai nam';
 // console.log(name.replace(/ho hoai/g, 'Hồ Hoài'));
 
+// const name = 'Ho Hoai Kiet';
+// console.log(name.includes('Kiet'));
+// console.log(name.startsWith('Ho'));
+
+// const name = 'Ho+Hoai+Kiet';
+// console.log(name.split('+').join(" "));
+
+// const arr = ['Ho', 'Hoai', 'Kiet', 'Ho', 'Hoai', 'San', 'Ho', 'Hoai', 'Nam'];
+// console.log(arr.join(' '));
+
 const name = 'Ho Hoai Kiet';
-console.log(name.includes('Kiet'));
-console.log(name.startsWith('Ho'));
+console.log(name.padStart(20, '*').padEnd(30, '*'));

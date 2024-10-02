@@ -1,16 +1,17 @@
 09 DATA STRUCTURES, MODERN OPERATORS AND STRINGS
-001 Section Intro
-002 Section Roadmap
-003 Destructuring Arrays
-004 Destructuring Objects
-005 The Spread Operator (...)
-006 Rest Pattern and Parameters
-007 Short Circuiting (&& and )
-008 The Nullish Coalescing Operator ()
-009 Logical Assignment Operators
-010 Coding Challenge #1
-011 Looping Arrays The for-of Loop
-012 Enhanced Object Literals
+  001 Section Intro
+  002 Section Roadmap
+  003 Destructuring Arrays
+  004 Destructuring Objects
+  005 The Spread Operator (...)
+  006 Rest Pattern and Parameters
+  007 Short Circuiting (&& and )
+  008 The Nullish Coalescing Operator ()
+  009 Logical Assignment Operators
+  010 Coding Challenge #1
+  011 Looping Arrays The for-of Loop
+  012 Enhanced Object Literals
+  013 Optional Chaining (.)
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

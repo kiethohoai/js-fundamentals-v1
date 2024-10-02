@@ -1,14 +1,22 @@
 'use strict';
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+};
 
-// for (let item of arr) {
-//   if (item === 2) continue;
-//   console.log(`🚀  item =>`, item);
-// }
+const temp = Object.keys(jonas);
+console.log(`🚀  temp =>`, temp);
 
-for (let item of arr.entries()) {
-  console.log(`🚀  item =>`, item);
+const temp2 = Object.values(jonas);
+console.log(`🚀  temp =>`, temp2);
+
+const temp3 = Object.entries(jonas);
+console.log(`🚀  temp =>`, temp3);
+
+for (let [key, value] of temp3) {
+  console.log(`🚀Key:Value => ${key} : ${value}`);
 }
-
-console.log(...arr.entries());

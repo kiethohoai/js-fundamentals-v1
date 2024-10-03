@@ -2,6 +2,7 @@
 003 Default Parameters
 004 How Passing Arguments Works Value vs. Reference
 005 First-Class and Higher-Order Functions
+006 Functions Accepting Callback Functions
 
 09 DATA STRUCTURES, MODERN OPERATORS AND STRINGS
 001 Section Intro

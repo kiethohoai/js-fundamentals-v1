@@ -4,6 +4,7 @@
 005 First-Class and Higher-Order Functions
 006 Functions Accepting Callback Functions
 007 Functions Returning Functions
+008 The call and apply Methods
 
 09 DATA STRUCTURES, MODERN OPERATORS AND STRINGS
 001 Section Intro

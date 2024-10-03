@@ -1,5 +1,5 @@
 10 A CLOSER LOOK AT FUNCTIONS
-
+003 Default Parameters
 
 09 DATA STRUCTURES, MODERN OPERATORS AND STRINGS
 001 Section Intro
@@ -25,7 +25,6 @@
 023 Working With Strings - Part 3
 024 Coding Challenge #4
 025 String Methods Practice
-
 
 #08 HOW JAVASCRIPT WORKS BEHIND THE SCENES
 001 Section Intro

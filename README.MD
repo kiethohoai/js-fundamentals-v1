@@ -1,5 +1,6 @@
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters
+004 How Passing Arguments Works Value vs. Reference
 
 09 DATA STRUCTURES, MODERN OPERATORS AND STRINGS
 001 Section Intro

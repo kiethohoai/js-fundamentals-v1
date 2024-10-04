@@ -6,6 +6,9 @@
 007 Functions Returning Functions
 008 The call and apply Methods
 009 The bind Method
+010 Coding Challenge #1
+011 Immediately Invoked Function Expressions (IIFE)
+
 
 09 DATA STRUCTURES, MODERN OPERATORS AND STRINGS
 001 Section Intro

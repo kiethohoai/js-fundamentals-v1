@@ -9,6 +9,7 @@
 010 Coding Challenge #1
 011 Immediately Invoked Function Expressions (IIFE)
 012 Closures
+013 More Closure Examples
 
 
 09 DATA STRUCTURES, MODERN OPERATORS AND STRINGS

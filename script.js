@@ -1,16 +1,23 @@
 'use strict';
 
-const parent = function () {
-  let num = 0;
+/* let f;
 
-  return function () {
-    num++;
-    console.log(`🚀  num =>`, num);
-    return num;
+const g = function () {
+  const x = 23;
+
+  f = function () {
+    console.log(x * 2);
   };
 };
 
-const test = parent();
-test();
-test();
-test();
+const h = function () {
+  const z = 7;
+  f = function () {
+    console.log(z * 2);
+  };
+};
+
+g();
+f();
+h();
+f(); */

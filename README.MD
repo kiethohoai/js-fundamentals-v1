@@ -1,3 +1,7 @@
+11 Working With Arrays
+003 Simple Array Methods
+
+
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters
 004 How Passing Arguments Works Value vs. Reference

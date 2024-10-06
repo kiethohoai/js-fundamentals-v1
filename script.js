@@ -76,15 +76,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 
 const arr = ['a', 'b', 'c', 'd', 'e'];
-
-// SPLICE
-// console.log(arr.splice(2));
-// console.log(arr.splice(-1));
-
-console.log(arr.splice(1, 2));
-
-console.log(`🚀  arr =>`, arr);
-
-// SLICE
-// console.log(arr.slice(1, -1));
-// console.log(`🚀  arr =>`, arr);
+console.log(arr[arr.length - 1]);
+console.log(arr.at(arr.length - 1));
+console.log(arr.slice(-1)[0]);
+console.log(arr.at(-1));

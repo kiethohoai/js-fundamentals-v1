@@ -79,4 +79,33 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-displayMovements(account1.movements);
+// displayMovements(account1.movements);
+
+
+// TODO 009 Coding Challenge #1
+// TEST DATA 1
+const julias = [3, 5, 2, 12, 7];
+const kates = [4, 1, 15, 8, 3];
+
+// TEST DATA 2
+const julias2 = [9, 16, 6, 8, 3];
+const kates2 = [10, 5, 6, 1, 4];
+
+const checkDogs = function (a1, a2) {
+  const juliasDogs = a1.slice(1, -1);
+  console.log(`🚀  juliasDogs =>`, juliasDogs);
+
+  const bothDogs = [...a2, ...juliasDogs];
+  const bothDogs2 = a2.concat(juliasDogs);
+  console.log(`🚀  bothDogs =>`, bothDogs);
+  console.log(`🚀  bothDogs2 =>`, bothDogs2);
+
+  bothDogs.forEach((dog, i) => {
+    if (dog >= 3) console.log(`🚀  Dog number ${i + 1} is an adult, and it is ${dog} years old`);
+    else console.log(`🚀  Dog number ${i + 1} is still a puppy 🐶`);
+  });
+};
+
+checkDogs(julias, kates);
+console.log('========================');
+checkDogs(julias2, kates2);

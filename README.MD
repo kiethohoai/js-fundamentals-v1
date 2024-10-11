@@ -5,6 +5,7 @@
 006 forEach With Maps and Sets
 007 PROJECT Bankist App
 008 Creating DOM Elements
+009 Coding Challenge #1
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

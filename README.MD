@@ -3,7 +3,8 @@
 004 The new at Method
 005 Looping Arrays forEach
 006 forEach With Maps and Sets
-007 PROJECT Bankist App 
+007 PROJECT Bankist App
+008 Creating DOM Elements
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

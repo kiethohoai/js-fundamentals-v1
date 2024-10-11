@@ -6,6 +6,7 @@
 007 PROJECT Bankist App
 008 Creating DOM Elements
 009 Coding Challenge #1
+010 Data Transformations map, filter, reduce
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

@@ -10,6 +10,7 @@
 011 The map Method
 012 Computing Usernames
 013 The filter Method
+014 The reduce Method
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

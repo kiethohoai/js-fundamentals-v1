@@ -61,8 +61,7 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-//todo displayMovements
-//INPUT: movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+//optimize displayMovements
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
 
@@ -81,7 +80,15 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
-//todo createUserName
+//optimize calcDisplayBalance
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+  return balance;
+};
+calcDisplayBalance(account1.movements);
+
+//optimize createUserName
 const createUserName = function (accs) {
   accs.forEach(acc => {
     acc.username = acc.owner
@@ -122,7 +129,7 @@ checkDogs(julias, kates);
 checkDogs(julias2, kates2);
  */
 
-//TODO 011 The map Method
+// TODO 011 The map Method
 /* 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd = 1.1;
@@ -132,21 +139,38 @@ console.log(`🚀  newMovements =>`, newMovements);
  */
 
 // todo 013 The filter Method
+/* 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const deposits = movements.filter(mov => mov > 0);
 const withdrawals = movements.filter(mov => mov <= 0);
 console.log(`🚀  deposits =>`, deposits);
 console.log(`🚀  withdrawals =>`, withdrawals);
-
 const newDeposits = [];
 const newWithdrawals = [];
 for (let mov of movements) {
   if (mov > 0) newDeposits.push(mov);
   else newWithdrawals.push(mov);
 }
-
 console.log(`🚀  newDeposits =>`, newDeposits);
 console.log(`🚀  newWithdrawals =>`, newWithdrawals);
-
-// Original Array
 console.log(`🚀  movements =>`, movements);
+ */
+
+//todo 014 The reduce Method
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+console.log(`🚀  balance =>`, balance);
+
+const balance2 = movements.reduce((acc, cur, i, arr) => {
+  console.log(`🚀Sum ${i}: ${acc}`);
+  return acc + cur;
+}, 0);
+console.log(`🚀  balance2 =>`, balance2);
+
+let balance3 = 0;
+for (let mov of movements) balance3 += mov;
+console.log(`🚀  balance3 =>`, balance3);
+
+const maxValue = movements.reduce((acc, mov) => (acc > mov ? acc : mov), movements[0]);
+console.log(`🚀  maxValue =>`, maxValue);

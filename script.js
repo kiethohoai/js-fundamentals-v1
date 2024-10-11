@@ -74,9 +74,11 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-
 const arr = ['a', 'b', 'c', 'd', 'e'];
-console.log(arr[arr.length - 1]);
-console.log(arr.at(arr.length - 1));
-console.log(arr.slice(-1)[0]);
-console.log(arr.at(-1));
+
+for (let [a, i] of arr.entries()) {
+  console.log(`🚀  a, i =>`, a, i);
+}
+
+arr.forEach((a, i) => console.log(a, i));
+console.log(`🚀  arr =>`, arr);

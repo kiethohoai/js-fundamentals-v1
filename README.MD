@@ -1,7 +1,7 @@
 11 Working With Arrays
 003 Simple Array Methods
 004 The new at Method
-
+005 Looping Arrays forEach
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters
@@ -15,7 +15,6 @@
 011 Immediately Invoked Function Expressions (IIFE)
 012 Closures
 013 More Closure Examples
-
 
 09 DATA STRUCTURES, MODERN OPERATORS AND STRINGS
 001 Section Intro

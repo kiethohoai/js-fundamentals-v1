@@ -9,6 +9,7 @@
 010 Data Transformations map, filter, reduce
 011 The map Method
 012 Computing Usernames
+013 The filter Method
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

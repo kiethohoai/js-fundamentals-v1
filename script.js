@@ -92,39 +92,61 @@ const createUserName = function (accs) {
   });
 };
 createUserName(accounts);
-console.log(`🚀  accounts =>`, accounts);
 
 // TODO 009 Coding Challenge #1
-// TEST DATA 1
-// const julias = [3, 5, 2, 12, 7];
-// const kates = [4, 1, 15, 8, 3];
+/* 
+TEST DATA 1
+const julias = [3, 5, 2, 12, 7];
+const kates = [4, 1, 15, 8, 3];
 
-// TEST DATA 2
-// const julias2 = [9, 16, 6, 8, 3];
-// const kates2 = [10, 5, 6, 1, 4];
+TEST DATA 2
+const julias2 = [9, 16, 6, 8, 3];
+const kates2 = [10, 5, 6, 1, 4];
 
-// const checkDogs = function (a1, a2) {
-//   const juliasDogs = a1.slice(1, -1);
-//   console.log(`🚀  juliasDogs =>`, juliasDogs);
+const checkDogs = function (a1, a2) {
+  const juliasDogs = a1.slice(1, -1);
+  console.log(`🚀  juliasDogs =>`, juliasDogs);
 
-//   const bothDogs = [...a2, ...juliasDogs];
-//   const bothDogs2 = a2.concat(juliasDogs);
-//   console.log(`🚀  bothDogs =>`, bothDogs);
-//   console.log(`🚀  bothDogs2 =>`, bothDogs2);
+  const bothDogs = [...a2, ...juliasDogs];
+  const bothDogs2 = a2.concat(juliasDogs);
+  console.log(`🚀  bothDogs =>`, bothDogs);
+  console.log(`🚀  bothDogs2 =>`, bothDogs2);
 
-//   bothDogs.forEach((dog, i) => {
-//     if (dog >= 3) console.log(`🚀  Dog number ${i + 1} is an adult, and it is ${dog} years old`);
-//     else console.log(`🚀  Dog number ${i + 1} is still a puppy 🐶`);
-//   });
-// };
+  bothDogs.forEach((dog, i) => {
+    if (dog >= 3) console.log(`🚀  Dog number ${i + 1} is an adult, and it is ${dog} years old`);
+    else console.log(`🚀  Dog number ${i + 1} is still a puppy 🐶`);
+  });
+};
 
-// checkDogs(julias, kates);
-// checkDogs(julias2, kates2);
+checkDogs(julias, kates);
+checkDogs(julias2, kates2);
+ */
 
 //TODO 011 The map Method
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-// const eurToUsd = 1.1;
+/* 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const eurToUsd = 1.1;
+const newMovements = movements.map(mov => mov * eurToUsd);
+console.log(`🚀  movements =>`, movements);
+console.log(`🚀  newMovements =>`, newMovements);
+ */
 
-// const newMovements = movements.map(mov => mov * eurToUsd);
-// console.log(`🚀  movements =>`, movements);
-// console.log(`🚀  newMovements =>`, newMovements);
+// todo 013 The filter Method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const deposits = movements.filter(mov => mov > 0);
+const withdrawals = movements.filter(mov => mov <= 0);
+console.log(`🚀  deposits =>`, deposits);
+console.log(`🚀  withdrawals =>`, withdrawals);
+
+const newDeposits = [];
+const newWithdrawals = [];
+for (let mov of movements) {
+  if (mov > 0) newDeposits.push(mov);
+  else newWithdrawals.push(mov);
+}
+
+console.log(`🚀  newDeposits =>`, newDeposits);
+console.log(`🚀  newWithdrawals =>`, newWithdrawals);
+
+// Original Array
+console.log(`🚀  movements =>`, movements);

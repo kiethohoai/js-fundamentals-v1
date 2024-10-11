@@ -2,6 +2,7 @@
 003 Simple Array Methods
 004 The new at Method
 005 Looping Arrays forEach
+006 forEach With Maps and Sets
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

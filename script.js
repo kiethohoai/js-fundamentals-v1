@@ -65,20 +65,29 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+/////////////////////////////////////////////////
+// 006 forEach With Maps and Sets
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+currencies.forEach((value, key, map) => {
+  console.log(`🚀  key : value  =>`, key, value);
+});
 
-/////////////////////////////////////////////////
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const test = new Set(['USD', 'GBP', 'EUR', 'EUR', 'USD', 'GBP']);
+console.log(`🚀  test =>`, test);
 
-for (let [a, i] of arr.entries()) {
-  console.log(`🚀  a, i =>`, a, i);
-}
-
-arr.forEach((a, i) => console.log(a, i));
-console.log(`🚀  arr =>`, arr);
+test.forEach((val, i, map) => {
+  console.log(`🚀  val, i =>`, val, i, map);
+});

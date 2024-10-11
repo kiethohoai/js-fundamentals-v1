@@ -11,6 +11,7 @@
 012 Computing Usernames
 013 The filter Method
 014 The reduce Method
+015 Coding Challenge #2
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

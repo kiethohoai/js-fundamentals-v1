@@ -157,7 +157,7 @@ console.log(`🚀  movements =>`, movements);
  */
 
 //todo 014 The reduce Method
-
+/* 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const balance = movements.reduce((acc, cur) => acc + cur, 0);
 console.log(`🚀  balance =>`, balance);
@@ -174,3 +174,27 @@ console.log(`🚀  balance3 =>`, balance3);
 
 const maxValue = movements.reduce((acc, mov) => (acc > mov ? acc : mov), movements[0]);
 console.log(`🚀  maxValue =>`, maxValue);
+ */
+
+// todo 015 Coding Challenge #2
+
+const data = [5, 2, 4, 1, 15, 8, 3];
+const data2 = [16, 6, 10, 5, 6, 1, 4];
+
+const calcAverageHumanAge = function (ages) {
+  const humanAges = ages.map(age => (age <= 2 ? 2 * age : 16 + age * 4));
+  console.log(`🚀  ages =>`, ages);
+  console.log(`🚀  humanAges =>`, humanAges);
+
+  const adultsAges = humanAges.filter(age => age >= 18);
+  console.log(`🚀  adultsAges =>`, adultsAges);
+
+  const averageAge = adultsAges.reduce((acc, cur) => acc + cur, 0) / adultsAges.length;
+  console.log(`🚀  averageAge =>`, averageAge);
+};
+calcAverageHumanAge(data);
+console.log(`===============================================`);
+
+calcAverageHumanAge(data2);
+
+

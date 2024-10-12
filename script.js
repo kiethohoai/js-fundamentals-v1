@@ -196,20 +196,24 @@ console.log(`🚀  maxValue =>`, maxValue);
 /* 
 const data = [5, 2, 4, 1, 15, 8, 3];
 const data2 = [16, 6, 10, 5, 6, 1, 4];
-
 const calcAverageHumanAge = function (ages) {
-  const humanAges = ages.map(age => (age <= 2 ? 2 * age : 16 + age * 4));
-  console.log(`🚀  ages =>`, ages);
-  console.log(`🚀  humanAges =>`, humanAges);
+  // const humanAges = ages.map(age => (age <= 2 ? 2 * age : 16 + age * 4));
+  // console.log(`🚀  ages =>`, ages);
+  // console.log(`🚀  humanAges =>`, humanAges);
 
-  const adultsAges = humanAges.filter(age => age >= 18);
-  console.log(`🚀  adultsAges =>`, adultsAges);
+  // const adultsAges = humanAges.filter(age => age >= 18);
+  // console.log(`🚀  adultsAges =>`, adultsAges);
 
-  const averageAge = adultsAges.reduce((acc, cur) => acc + cur, 0) / adultsAges.length;
-  console.log(`🚀  averageAge =>`, averageAge);
+  // const averageAge = adultsAges.reduce((acc, cur) => acc + cur, 0) / adultsAges.length;
+  // console.log(`🚀  averageAge =>`, averageAge);
+
+  const humanAage2 = ages
+    .map(age => (age <= 2 ? age * 2 : age * 4 + 16))
+    .filter(age => age >= 18)
+    .reduce((acc, cur, i, a) => acc + cur / a.length, 0);
+  console.log(`🚀  humanAage2 =>`, humanAage2);
 };
 calcAverageHumanAge(data);
-console.log(`===============================================`);
 calcAverageHumanAge(data2);
  */
 
@@ -223,4 +227,3 @@ const result = movements
   .reduce((acc, cur) => acc + cur, 0);
 console.log(`🚀  result =>`, Math.trunc(result));
  */
-

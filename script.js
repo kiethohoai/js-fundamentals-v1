@@ -9,28 +9,28 @@ const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
-  pin: 1111,
+  pin: 1,
 };
 
 const account2 = {
   owner: 'Jessica Davis',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
-  pin: 2222,
+  pin: 2,
 };
 
 const account3 = {
   owner: 'Steven Thomas Williams',
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   interestRate: 0.7,
-  pin: 3333,
+  pin: 3,
 };
 
 const account4 = {
   owner: 'Sarah Smith',
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
-  pin: 4444,
+  pin: 4,
 };
 
 const accounts = [account1, account2, account3, account4];
@@ -61,6 +61,9 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+// Init State of App
+// containerMovements.innerHTML = '';
+
 // displayMovements
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
@@ -78,7 +81,6 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-displayMovements(account1.movements);
 
 // calcDisplayBalance
 const calcDisplayBalance = function (movements) {
@@ -86,9 +88,8 @@ const calcDisplayBalance = function (movements) {
   labelBalance.textContent = `${balance} EUR`;
   return balance;
 };
-calcDisplayBalance(account1.movements);
 
-//  calcDisplaySummary
+//calcDisplaySummary
 const calcDisplaySummary = function (movements) {
   const income = movements.filter(mov => mov > 0).reduce((acc, cur) => acc + cur, 0);
   const outcome = movements.filter(mov => mov < 0).reduce((acc, cur) => acc + cur, 0);
@@ -102,7 +103,6 @@ const calcDisplaySummary = function (movements) {
   labelSumOut.textContent = `${Math.abs(outcome)} EUR`;
   labelSumInterest.textContent = `${interest} EUR`;
 };
-calcDisplaySummary(account1.movements);
 
 // createUserName
 const createUserName = function (accs) {
@@ -115,6 +115,41 @@ const createUserName = function (accs) {
   });
 };
 createUserName(accounts);
+
+// test data js1, jd2, stw3, ss4
+inputLoginUsername.value = 'js';
+inputLoginPin.value = '1';
+
+// User Login
+let currentAccount;
+btnLogin.addEventListener('click', e => {
+  e.preventDefault();
+
+  currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
+
+  if (currentAccount?.pin === +inputLoginPin.value) {
+    // Clear input field
+    inputLoginUsername.value = '';
+    inputLoginPin.value = '';
+    inputLoginUsername.setAttribute('disabled', true);
+    inputLoginPin.setAttribute('disabled', true);
+    btnLogin.setAttribute('disabled', true);
+
+    //Display UI & Message
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ').at(0)}`;
+
+    //Display movements
+    displayMovements(currentAccount.movements);
+
+    //Display Balance
+    calcDisplayBalance(currentAccount.movements);
+
+    //Display summary
+    calcDisplaySummary(currentAccount.movements);
+  } else {
+    labelWelcome.textContent = 'Invalid User or Password!';
+  }
+});
 
 // 009 Coding Challenge #1
 /* 
@@ -229,6 +264,7 @@ console.log(`🚀  result =>`, Math.trunc(result));
  */
 
 // 018 The find Method
+/* 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const res = movements.find(mov => mov >= 1200);
 // console.log(`🚀  res =>`, res);
@@ -236,3 +272,4 @@ const res = movements.find(mov => mov >= 1200);
 console.log(accounts);
 const res2 = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(`🚀  res2 =>`, res2);
+ */

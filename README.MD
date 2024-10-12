@@ -15,6 +15,7 @@
 016 The Magic of Chaining Methods
 017 Coding Challenge #3
 018 The find Method
+019 Implementing Login
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

@@ -88,6 +88,22 @@ const calcDisplayBalance = function (movements) {
 };
 calcDisplayBalance(account1.movements);
 
+// optimize calcDisplaySummary
+const calcDisplaySummary = function (movements) {
+  const income = movements.filter(mov => mov > 0).reduce((acc, cur) => acc + cur, 0);
+  const outcome = movements.filter(mov => mov < 0).reduce((acc, cur) => acc + cur, 0);
+  const interest = movements
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * 1.2) / 100)
+    .filter(int => int > 1)
+    .reduce((acc, cur) => acc + cur);
+
+  labelSumIn.textContent = `${income} EUR`;
+  labelSumOut.textContent = `${Math.abs(outcome)} EUR`;
+  labelSumInterest.textContent = `${interest} EUR`;
+};
+calcDisplaySummary(account1.movements);
+
 //optimize createUserName
 const createUserName = function (accs) {
   accs.forEach(acc => {
@@ -177,7 +193,7 @@ console.log(`🚀  maxValue =>`, maxValue);
  */
 
 // todo 015 Coding Challenge #2
-
+/* 
 const data = [5, 2, 4, 1, 15, 8, 3];
 const data2 = [16, 6, 10, 5, 6, 1, 4];
 
@@ -194,7 +210,17 @@ const calcAverageHumanAge = function (ages) {
 };
 calcAverageHumanAge(data);
 console.log(`===============================================`);
-
 calcAverageHumanAge(data2);
+ */
 
+// todo 016 The Magic of Chaining Methods
+/* 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const eurToUsd = 1.1;
+const result = movements
+  .filter(mov => mov > 0)
+  .map(mov => mov * eurToUsd)
+  .reduce((acc, cur) => acc + cur, 0);
+console.log(`🚀  result =>`, Math.trunc(result));
+ */
 

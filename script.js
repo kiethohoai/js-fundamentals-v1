@@ -61,7 +61,7 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-//optimize displayMovements
+// displayMovements
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
 
@@ -80,7 +80,7 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
-//optimize calcDisplayBalance
+// calcDisplayBalance
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} EUR`;
@@ -88,7 +88,7 @@ const calcDisplayBalance = function (movements) {
 };
 calcDisplayBalance(account1.movements);
 
-// optimize calcDisplaySummary
+//  calcDisplaySummary
 const calcDisplaySummary = function (movements) {
   const income = movements.filter(mov => mov > 0).reduce((acc, cur) => acc + cur, 0);
   const outcome = movements.filter(mov => mov < 0).reduce((acc, cur) => acc + cur, 0);
@@ -104,7 +104,7 @@ const calcDisplaySummary = function (movements) {
 };
 calcDisplaySummary(account1.movements);
 
-//optimize createUserName
+// createUserName
 const createUserName = function (accs) {
   accs.forEach(acc => {
     acc.username = acc.owner
@@ -116,7 +116,7 @@ const createUserName = function (accs) {
 };
 createUserName(accounts);
 
-// TODO 009 Coding Challenge #1
+// 009 Coding Challenge #1
 /* 
 TEST DATA 1
 const julias = [3, 5, 2, 12, 7];
@@ -145,7 +145,7 @@ checkDogs(julias, kates);
 checkDogs(julias2, kates2);
  */
 
-// TODO 011 The map Method
+// 011 The map Method
 /* 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd = 1.1;
@@ -154,7 +154,7 @@ console.log(`🚀  movements =>`, movements);
 console.log(`🚀  newMovements =>`, newMovements);
  */
 
-// todo 013 The filter Method
+// 013 The filter Method
 /* 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const deposits = movements.filter(mov => mov > 0);
@@ -172,7 +172,7 @@ console.log(`🚀  newWithdrawals =>`, newWithdrawals);
 console.log(`🚀  movements =>`, movements);
  */
 
-//todo 014 The reduce Method
+//014 The reduce Method
 /* 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const balance = movements.reduce((acc, cur) => acc + cur, 0);
@@ -192,7 +192,7 @@ const maxValue = movements.reduce((acc, mov) => (acc > mov ? acc : mov), movemen
 console.log(`🚀  maxValue =>`, maxValue);
  */
 
-// todo 015 Coding Challenge #2
+// 015 Coding Challenge #2
 /* 
 const data = [5, 2, 4, 1, 15, 8, 3];
 const data2 = [16, 6, 10, 5, 6, 1, 4];
@@ -217,7 +217,7 @@ calcAverageHumanAge(data);
 calcAverageHumanAge(data2);
  */
 
-// todo 016 The Magic of Chaining Methods
+// 016 The Magic of Chaining Methods
 /* 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd = 1.1;
@@ -227,3 +227,12 @@ const result = movements
   .reduce((acc, cur) => acc + cur, 0);
 console.log(`🚀  result =>`, Math.trunc(result));
  */
+
+// 018 The find Method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const res = movements.find(mov => mov >= 1200);
+// console.log(`🚀  res =>`, res);
+
+console.log(accounts);
+const res2 = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(`🚀  res2 =>`, res2);

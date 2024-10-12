@@ -18,6 +18,7 @@
 019 Implementing Login
 020 Implementing Transfers
 021 The findIndex Method
+022 some and every
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

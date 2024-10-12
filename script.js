@@ -221,6 +221,26 @@ btnClose.addEventListener('click', e => {
   }
 });
 
+// User request Loan
+btnLoan.addEventListener('click', e => {
+  e.preventDefault();
+
+  const amount = +inputLoanAmount.value;
+
+  if (amount > 0 && currentAccount?.movements.some(mov => mov >= amount * 0.1)) {
+    alert('success');
+    // add movement
+    currentAccount.movements.push(amount);
+    // update UI
+    updateUI(currentAccount);
+
+    // reset loan
+    inputLoanAmount.value = '0';
+  } else {
+    alert('fail');
+  }
+});
+
 // 009 Coding Challenge #1
 /* 
 TEST DATA 1
@@ -345,3 +365,11 @@ console.log(`🚀  res2 =>`, res2);
  */
 
 // 021 The findIndex Method
+
+// 022 some and every
+/* 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const res = movements.some(mov => mov > 0);
+console.log(`🚀  res =>`, res);
+console.log(movements.every(mov => mov > 2900));
+ */

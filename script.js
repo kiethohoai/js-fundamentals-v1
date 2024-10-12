@@ -16,21 +16,21 @@ const account2 = {
   owner: 'Jessica Davis',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
-  pin: 2,
+  pin: 1,
 };
 
 const account3 = {
   owner: 'Steven Thomas Williams',
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   interestRate: 0.7,
-  pin: 3,
+  pin: 1,
 };
 
 const account4 = {
   owner: 'Sarah Smith',
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
-  pin: 4,
+  pin: 1,
 };
 
 const accounts = [account1, account2, account3, account4];
@@ -83,10 +83,10 @@ const displayMovements = function (movements) {
 };
 
 // calcDisplayBalance
-const calcDisplayBalance = function (movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance} EUR`;
-  return balance;
+const calcDisplayBalance = function (acc) {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${acc.balance} EUR`;
+  return acc.balance;
 };
 
 //calcDisplaySummary
@@ -116,6 +116,18 @@ const createUserName = function (accs) {
 };
 createUserName(accounts);
 
+// updateUI
+const updateUI = acc => {
+  //Display movements
+  displayMovements(acc.movements);
+
+  //Display Balance
+  calcDisplayBalance(acc);
+
+  //Display summary
+  calcDisplaySummary(acc.movements);
+};
+
 // test data js1, jd2, stw3, ss4
 inputLoginUsername.value = 'js';
 inputLoginPin.value = '1';
@@ -131,23 +143,54 @@ btnLogin.addEventListener('click', e => {
     // Clear input field
     inputLoginUsername.value = '';
     inputLoginPin.value = '';
-    inputLoginUsername.setAttribute('disabled', true);
-    inputLoginPin.setAttribute('disabled', true);
-    btnLogin.setAttribute('disabled', true);
+    // inputLoginUsername.setAttribute('disabled', true);
+    // inputLoginPin.setAttribute('disabled', true);
+    // btnLogin.setAttribute('disabled', true);
+
+    // Auto fill field (for testing)
+    inputTransferTo.value = 'jd';
+    inputTransferAmount.value = '500';
 
     //Display UI & Message
     labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ').at(0)}`;
 
-    //Display movements
-    displayMovements(currentAccount.movements);
-
-    //Display Balance
-    calcDisplayBalance(currentAccount.movements);
-
-    //Display summary
-    calcDisplaySummary(currentAccount.movements);
+    //
+    updateUI(currentAccount);
   } else {
     labelWelcome.textContent = 'Invalid User or Password!';
+  }
+});
+
+// auto fill field
+// inputTransferTo.value = 'jd';
+// inputTransferAmount.value = '4000';
+
+// 020 Implementing Transfers
+btnTransfer.addEventListener('click', e => {
+  e.preventDefault();
+
+  // amount & account?
+  const amount = +inputTransferAmount.value;
+  const receiverAcc = accounts.find(acc => acc.username === inputTransferTo.value);
+
+  console.log(`🚀  amount =>`, amount);
+  console.log(`🚀  receiverAcc =>`, receiverAcc);
+
+  if (
+    // receiverAcc &&
+    amount > 0 &&
+    currentAccount.balance > amount &&
+    currentAccount.username !== receiverAcc?.username
+  ) {
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
+    updateUI(currentAccount);
+
+    console.log('SUCCESS: VALID TRANFER!');
+    // inputTransferTo.value = '';
+    // inputTransferAmount.value = '';
+  } else {
+    console.log('ERROR: INVALID TRANFER');
   }
 });
 

@@ -135,7 +135,9 @@ inputLoginPin.value = '1';
 // User Login
 let currentAccount;
 btnLogin.addEventListener('click', e => {
+  // prevent & show UI
   e.preventDefault();
+  containerApp.style.opacity = 100;
 
   currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
 
@@ -165,7 +167,7 @@ btnLogin.addEventListener('click', e => {
 // inputTransferTo.value = 'jd';
 // inputTransferAmount.value = '4000';
 
-// 020 Implementing Transfers
+// User Transfers
 btnTransfer.addEventListener('click', e => {
   e.preventDefault();
 
@@ -191,6 +193,31 @@ btnTransfer.addEventListener('click', e => {
     // inputTransferAmount.value = '';
   } else {
     console.log('ERROR: INVALID TRANFER');
+  }
+});
+
+// FILL DATA FOR TESTING
+inputCloseUsername.value = 'js';
+inputClosePin.value = '1';
+
+// Close Account
+btnClose.addEventListener('click', e => {
+  e.preventDefault();
+
+  if (
+    //Check conditions
+    currentAccount.username === inputCloseUsername.value &&
+    currentAccount.pin === +inputClosePin.value
+  ) {
+    // Find index User & Delete
+    const index = accounts.findIndex(acc => acc.username === currentAccount.username);
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
+    labelWelcome.textContent = 'Log in to get started';
+  } else {
+    alert('INVALID');
   }
 });
 
@@ -316,3 +343,5 @@ console.log(accounts);
 const res2 = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(`🚀  res2 =>`, res2);
  */
+
+// 021 The findIndex Method

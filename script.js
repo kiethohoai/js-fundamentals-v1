@@ -373,3 +373,33 @@ const res = movements.some(mov => mov > 0);
 console.log(`🚀  res =>`, res);
 console.log(movements.every(mov => mov > 2900));
  */
+
+// 023 flat and flatMap
+/* 
+// ex1
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+const a1 = [
+  [1, [2, 3]],
+  [4, 5, 6],
+  [7, 8, [9, 10, [11, 12]]],
+];
+const a2 = a1.flat();
+const a3 = a2.flat();
+const a4 = a3.flat();
+
+// ex2
+const accountMovements = accounts.map(acc => acc.movements);
+const allMovements = accountMovements.flat();
+const overalBalance = allMovements.reduce((acc, cur) => acc + cur, 0);
+
+const res = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, cur) => acc + cur, 0);
+console.log(`🚀  res =>`, res);
+
+// Better performance
+const res2 = accounts.flatMap(acc => acc.movements).reduce((acc, cur) => acc + cur, 0);
+console.log(`🚀  res2 =>`, res2);
+ */
+

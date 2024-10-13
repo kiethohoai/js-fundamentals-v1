@@ -19,6 +19,7 @@
 020 Implementing Transfers
 021 The findIndex Method
 022 some and every
+023 flat and flatMap
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

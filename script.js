@@ -65,10 +65,13 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // containerMovements.innerHTML = '';
 
 // displayMovements
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
 
-  movements.forEach((mov, i) => {
+  // sort
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach((mov, i) => {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const html = `
@@ -163,10 +166,6 @@ btnLogin.addEventListener('click', e => {
   }
 });
 
-// auto fill field
-// inputTransferTo.value = 'jd';
-// inputTransferAmount.value = '4000';
-
 // User Transfers
 btnTransfer.addEventListener('click', e => {
   e.preventDefault();
@@ -239,6 +238,14 @@ btnLoan.addEventListener('click', e => {
   } else {
     alert('fail');
   }
+});
+
+// SORT FEATURE
+let state = false;
+btnSort.addEventListener('click', e => {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !state);
+  state = !state;
 });
 
 // 009 Coding Challenge #1
@@ -403,3 +410,15 @@ const res2 = accounts.flatMap(acc => acc.movements).reduce((acc, cur) => acc + c
 console.log(`🚀  res2 =>`, res2);
  */
 
+// 024 Sorting Arrays
+/* 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const res = movements.slice().sort((a, b) => a - b);
+ */
+
+// 025 More Ways of Creating and Filling Arrays
+/* 
+const movUI = Array.from(document.querySelectorAll('.movements__value'), cur => +cur.textContent);
+console.log(`🚀  movUI =>`, movUI);
+
+ */

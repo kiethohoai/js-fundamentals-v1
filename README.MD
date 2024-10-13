@@ -22,6 +22,7 @@
 023 flat and flatMap
 024 Sorting Arrays
 025 More Ways of Creating and Filling Arrays
+026 Summary Which Array Method to Use
 
 10 A CLOSER LOOK AT FUNCTIONS
 003 Default Parameters

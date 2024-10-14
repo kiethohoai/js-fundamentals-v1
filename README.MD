@@ -1,4 +1,5 @@
 12 NUMBERS, DATES, INTL AND TIMERS
+003 Converting and Checking Numbers
 
 11 Working With Arrays
 003 Simple Array Methods

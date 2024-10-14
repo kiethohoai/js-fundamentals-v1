@@ -5,6 +5,7 @@
 006 Numeric Separators
 008 Creating Dates
 009 Adding Dates to Bankist App
+010 Operations With Dates
 
 11 Working With Arrays
 003 Simple Array Methods

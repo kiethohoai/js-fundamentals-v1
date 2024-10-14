@@ -16,14 +16,14 @@ const account1 = {
   pin: 1,
 
   movementsDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2020-05-08T14:11:59.604Z',
-    '2020-05-27T17:01:17.194Z',
-    '2020-07-11T23:36:17.929Z',
-    '2020-07-12T10:51:36.790Z',
+    '2024-07-10T21:31:17.178Z',
+    '2024-08-11T07:42:02.383Z',
+    '2024-09-12T09:15:04.904Z',
+    '2024-10-13T10:17:24.185Z',
+    '2024-10-14T14:11:59.604Z',
+    '2024-10-09T17:01:17.194Z',
+    '2024-10-08T23:36:17.929Z',
+    '2024-10-07T10:51:36.790Z',
   ],
   currency: 'EUR',
   locale: 'pt-PT', // de-DE
@@ -85,6 +85,25 @@ inputLoginPin.value = '1';
 /////////////////////////////////////////////////
 // Functions
 
+const formatMovementDate = function (date) {
+  const newDate = new Date();
+
+  const caclDayPassed = (day1, day2) => {
+    return Math.round(Math.abs(day2 - day1) / (1000 * 60 * 60 * 24));
+  };
+
+  const dayPassed = caclDayPassed(date, newDate);
+
+  if (dayPassed === 0) return `Today`;
+  if (dayPassed === 1) return `Yesterday`;
+  if (dayPassed <= 7) return `${dayPassed} days ago`;
+
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+};
+
 //todo Display Movements
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
@@ -93,12 +112,9 @@ const displayMovements = function (acc, sort = false) {
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
-    let cur = new Date(acc.movementsDates[i]);
 
-    const day = cur.getDate();
-    const month = cur.getMonth() + 1;
-    const year = cur.getFullYear();
-    let displayDate = `${day}/${month}/${year}`;
+    let date = new Date(acc.movementsDates[i]);
+    let displayDate = formatMovementDate(date);
 
     const html = `
       <div class="movements__row">
@@ -287,4 +303,12 @@ console.log(now.getDay());
 console.log(now.getDate());
 console.log(now.getMonth());
 console.log(now.getFullYear());
+ */
+
+// 010 Operations With Dates
+/* 
+const day1 = new Date(2024, 10, 10);
+const day2 = new Date(2024, 10, 20);
+const res = (day2 - day1) / (1000 * 60 * 60 * 24);
+console.log(`🚀  res =>`, res);
  */

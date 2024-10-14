@@ -4,6 +4,7 @@
 005 The Remainder Operator
 006 Numeric Separators
 008 Creating Dates
+009 Adding Dates to Bankist App
 
 11 Working With Arrays
 003 Simple Array Methods

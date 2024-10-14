@@ -85,7 +85,7 @@ inputLoginPin.value = '1';
 /////////////////////////////////////////////////
 // Functions
 
-// Display Movements
+//todo Display Movements
 const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
 
@@ -105,13 +105,13 @@ const displayMovements = function (movements, sort = false) {
   });
 };
 
-// calcDisplayBalance
+//todo calcDisplayBalance
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
 };
 
-// calcDisplaySummary
+//todo calcDisplaySummary
 const calcDisplaySummary = function (acc) {
   const incomes = acc.movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes.toFixed(2)}€`;
@@ -130,7 +130,7 @@ const calcDisplaySummary = function (acc) {
   labelSumInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
-// createUsernames
+//todo createUsernames
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -142,7 +142,7 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
-// updateUI
+//todo updateUI
 const updateUI = function (acc) {
   // Display movements
   displayMovements(acc.movements);

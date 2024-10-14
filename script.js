@@ -247,3 +247,11 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+//todo 006 Numeric Separators
+const num = 123_000_000_000;
+const num1 = 123_45;
+console.log(`🚀  num1 =>`, num1);
+console.log(`🚀  num =>`, num);
+
+const PI = 3.1415;
+console.log(`🚀  PI =>`, PI);

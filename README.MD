@@ -2,6 +2,7 @@
 003 Converting and Checking Numbers
 004 Math and Rounding
 005 The Remainder Operator
+006 Numeric Separators
 
 11 Working With Arrays
 003 Simple Array Methods

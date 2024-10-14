@@ -247,11 +247,20 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
-//todo 006 Numeric Separators
-const num = 123_000_000_000;
-const num1 = 123_45;
-console.log(`🚀  num1 =>`, num1);
+//todo 007 Working with BigInt
+/* 
+const num = BigInt(2 ** 53 - 1);
 console.log(`🚀  num =>`, num);
+ */
 
-const PI = 3.1415;
-console.log(`🚀  PI =>`, PI);
+// todo 008 Creating Dates
+/* 
+const now = new Date();
+console.log(`🚀  now =>`, now);
+console.log(now.getDay());
+console.log(now.getDate());
+console.log(now.getMonth());
+console.log(now.getFullYear());
+ */
+
+

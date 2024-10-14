@@ -3,6 +3,7 @@
 004 Math and Rounding
 005 The Remainder Operator
 006 Numeric Separators
+008 Creating Dates
 
 11 Working With Arrays
 003 Simple Array Methods

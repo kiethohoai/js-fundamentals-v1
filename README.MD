@@ -1,5 +1,6 @@
 12 NUMBERS, DATES, INTL AND TIMERS
 003 Converting and Checking Numbers
+004 Math and Rounding
 
 11 Working With Arrays
 003 Simple Array Methods

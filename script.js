@@ -282,21 +282,23 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
-//todo Request loan
+//todo REQUEST LOAN
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
 
   const amount = Math.floor(inputLoanAmount.value);
 
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
-    // Add movement
-    currentAccount.movements.push(amount);
+    setTimeout(() => {
+      // Add movement
+      currentAccount.movements.push(amount);
 
-    // Add transfer date
-    currentAccount.movementsDates.push(new Date().toISOString());
+      // Add transfer date
+      currentAccount.movementsDates.push(new Date().toISOString());
 
-    // Update UI
-    updateUI(currentAccount);
+      // Update UI
+      updateUI(currentAccount);
+    }, 2000);
   }
   inputLoanAmount.value = '';
 });
@@ -329,3 +331,28 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 //TODO LECTURES
+
+
+//013 Timers setTimeout and setInterval
+/* 
+const info = ['John', 30];
+
+const displayInfo = setTimeout(
+  (name, age) => {
+    console.log(`Hi, my name is ${name} and I am ${age} years old.`);
+  },
+  2000,
+  ...info,
+);
+
+console.log('Waiting...');
+if (info.includes('John')) {
+  clearTimeout(displayInfo);
+  console.log('Clear timeout displayInfo');
+} 
+
+// setInterval
+setInterval(() => {
+  console.log(new Date());
+}, 3000);
+*/

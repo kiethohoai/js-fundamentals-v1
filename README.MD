@@ -8,6 +8,7 @@
 010 Operations With Dates
 011 Internationalizing Dates (Intl)
 012 Internationalizing Numbers (Intl)
+013 Timers setTimeout and setInterval
 
 11 Working With Arrays
 003 Simple Array Methods

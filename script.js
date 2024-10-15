@@ -106,6 +106,14 @@ const formatMovementDate = function (date, locale) {
   return Intl.DateTimeFormat(locale).format(date);
 };
 
+// todo formatCur
+const formatCur = function (value, locale, currency) {
+  return new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: currency,
+  }).format(value);
+};
+
 //todo Display Movements
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
@@ -115,6 +123,15 @@ const displayMovements = function (acc, sort = false) {
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
+    /* C1    
+    const formattedMov = new Intl.NumberFormat(acc.locale, {
+      style: 'currency',
+      currency: acc.currency,
+    }).format(mov); */
+
+    // C2
+    const formattedMov2 = formatCur(mov, acc.locale, acc.currency);
+
     let date = new Date(acc.movementsDates[i]);
     let displayDate = formatMovementDate(date, acc.locale);
 
@@ -122,7 +139,7 @@ const displayMovements = function (acc, sort = false) {
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
         <div class="movements__date">${displayDate}</div>
-        <div class="movements__value">${mov.toFixed(2)}€</div>
+        <div class="movements__value">${formattedMov2}</div>
       </div>
     `;
 
@@ -133,26 +150,38 @@ const displayMovements = function (acc, sort = false) {
 //todo calcDisplayBalance
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
+
+  /* C1
+  const formattedMov = new Intl.NumberFormat(acc.locale, {
+    style: 'currency',
+    currency: acc.currency,
+  }).format(acc.balance); */
+
+  // C2
+  const formattedMov = formatCur(acc.balance, acc.locale, acc.currency);
+
+  labelBalance.textContent = formattedMov;
 };
 
 //todo calcDisplaySummary
 const calcDisplaySummary = function (acc) {
   const incomes = acc.movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
+  // labelSumIn.textContent = `${incomes.toFixed(2)}€`;
+  labelSumIn.textContent = formatCur(incomes, acc.locale, acc.currency);
 
   const out = acc.movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
+  // labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
+  labelSumOut.textContent = formatCur(out, acc.locale, acc.currency);
 
   const interest = acc.movements
     .filter(mov => mov > 0)
     .map(deposit => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
-      // console.log(arr);
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
+  // labelSumInterest.textContent = `${interest.toFixed(2)}€`;
+  labelSumInterest.textContent = formatCur(interest, acc.locale, acc.currency);
 };
 
 //todo createUsernames
@@ -299,27 +328,4 @@ btnSort.addEventListener('click', function (e) {
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-// LECTURES
-//todo 007 Working with BigInt
-/* 
-const num = BigInt(2 ** 53 - 1);
-console.log(`🚀  num =>`, num);
- */
-
-// todo 008 Creating Dates
-/* 
-const now = new Date();
-console.log(`🚀  now =>`, now);
-console.log(now.getDay());
-console.log(now.getDate());
-console.log(now.getMonth());
-console.log(now.getFullYear());
- */
-
-// 010 Operations With Dates
-/* 
-const day1 = new Date(2024, 10, 10);
-const day2 = new Date(2024, 10, 20);
-const res = (day2 - day1) / (1000 * 60 * 60 * 24);
-console.log(`🚀  res =>`, res);
- */
+//TODO LECTURES

@@ -6,6 +6,7 @@
 008 Creating Dates
 009 Adding Dates to Bankist App
 010 Operations With Dates
+011 Internationalizing Dates (Intl)
 
 11 Working With Arrays
 003 Simple Array Methods

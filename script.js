@@ -78,14 +78,14 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-// Fill Data
+//todo Fake Fill Data
 inputLoginUsername.value = 'js';
-// inputLoginUsername.value = "jd"
 inputLoginPin.value = '1';
 /////////////////////////////////////////////////
 // Functions
 
-const formatMovementDate = function (date) {
+// todo formatMovementDate
+const formatMovementDate = function (date, locale) {
   const newDate = new Date();
 
   const caclDayPassed = (day1, day2) => {
@@ -98,10 +98,12 @@ const formatMovementDate = function (date) {
   if (dayPassed === 1) return `Yesterday`;
   if (dayPassed <= 7) return `${dayPassed} days ago`;
 
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-  return `${day}/${month}/${year}`;
+  // const day = date.getDate();
+  // const month = date.getMonth() + 1;
+  // const year = date.getFullYear();
+  // return `${day}/${month}/${year}`;
+
+  return Intl.DateTimeFormat(locale).format(date);
 };
 
 //todo Display Movements
@@ -114,7 +116,7 @@ const displayMovements = function (acc, sort = false) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     let date = new Date(acc.movementsDates[i]);
-    let displayDate = formatMovementDate(date);
+    let displayDate = formatMovementDate(date, acc.locale);
 
     const html = `
       <div class="movements__row">
@@ -207,12 +209,21 @@ btnLogin.addEventListener('click', function (e) {
     updateUI(currentAccount);
 
     const now = new Date();
-    const day = `${now.getDate()}`.padStart(2, '0');
-    const month = `${now.getMonth() + 1}`.padStart(2, '0');
-    const year = now.getFullYear();
-    const hour = `${now.getHours()}`.padStart(2, '0');
-    const min = `${now.getMinutes()}`.padStart(2, '0');
-    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+    // const day = `${now.getDate()}`.padStart(2, '0');
+    // const month = `${now.getMonth() + 1}`.padStart(2, '0');
+    // const year = now.getFullYear();
+    // const hour = `${now.getHours()}`.padStart(2, '0');
+    // const min = `${now.getMinutes()}`.padStart(2, '0');
+    // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+
+    labelDate.textContent = Intl.DateTimeFormat('en-GB', {
+      day: 'numeric',
+      month: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      weekday: 'short',
+    }).format(now);
   }
 });
 
@@ -242,7 +253,7 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
-// Request loan
+//todo Request loan
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
 
